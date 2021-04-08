@@ -5,7 +5,7 @@ $(function () {
         insData = insData.trim();
 
         var pattern = "영어/숫자 유효성 검사";
-        var regExp = /[^a-z|A-Z|0-9]/;
+        var regExp = /[^a-z|A-Z|0-9|_$]/;
         var res = "";
 
         if (regExp.test(insData)) {
