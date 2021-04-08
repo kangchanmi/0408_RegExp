@@ -1,0 +1,39 @@
+﻿[abc] => a, b, c 중 하나를 검색
+[^abc] => a, b, c를 제외한 문자 하나 검색
+[A-Z] => 알파벳 대문자 문자 검색
+[a-z] => 알파벳 소문자 문자 검색
+[0-9] => 0-9 까지의 숫자 검색
+...
+
+
+
+
+  var txt = document.getElementById("insData").value;
+
+
+
+            var chkReg = /[^ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+            if (chkReg.test(txt)) {
+                alert("한글만 입력가능");
+            } else {
+                alert("OK");
+            }
+
+----------------------------------------------------------------
+
+var chkReg = /[^a-z|A-Z|0-9]/;
+            if (chkReg.test(txt)) {
+                alert("영어와 숫자만 입력가능");
+            } else {
+                alert("OK");
+            }
+
+----------------------------------------------------------------
+
+    var txt = document.getElementById("insData").value;
+            var chkReg = /[^a-z|A-Z|0-9|_$]/;
+            if (chkReg.test(txt)) {
+                alert("영어와 숫자, 특수기호 _, $만 입력가능");
+            } else {
+                alert("OK");
+            }
